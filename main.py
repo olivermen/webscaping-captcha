@@ -8,7 +8,7 @@ resp = requests.get(url, headers=headers)
  # Parse the html and create a BeautifulSoup object so we can access and parse the content
 soup = BeautifulSoup(resp.text, 'lxml')
  # Loop through the content and find all elements with the class 'captcha'
- captchas = soup.find_all('div', class_='captcha')
+captchas = soup.find_all('div', class_='captcha')
  # Loop through the captchas and add the URL of each captcha to a list
 captcha_urls = []
 for captcha in captchas:
